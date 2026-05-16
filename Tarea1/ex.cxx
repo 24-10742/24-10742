@@ -1,24 +1,29 @@
-include <vector>  // Para poder usar std::vector
-double mean(const std::vector<double>& data) {
+#include <iostream>
+#include <vector>
+#include <numeric> // Necesaria para accumulate
+#include <cmath>   // Para operaciones matemáticas
+
+using namespace std;
+
+// Ejercicio 3: Promedio y Varianza
+
+// Calcula el promedio: suma de elementos dividida entre el total
+double mean(const vector<double>& data) {
     if (data.empty()) return 0.0;
-    
-    double sum = 0.0;
-    for (double value : data) {
-        sum += value;
-    }
-    
+    double sum = accumulate(data.begin(), data.end(), 0.0);
     return sum / data.size();
 }
-double variance(const std::vector<double>& data) {
-    if (data.size() <= 1) return 0.0;
+
+// Calcula la varianza: promedio de los cuadrados de las desviaciones
+double variance(const vector<double>& data) {
+    if (data.empty()) return 0.0;
     
     double m = mean(data);
-    double sum_sq_diff = 0.0;
+    double cumulative_sum = 0.0;
     
-    for (double value : data) {
-        double diff = value - m;
-        sum_sq_diff += (diff * diff);
+    for (double x : data) {
+        cumulative_sum += (x - m) * (x - m);
     }
     
-    return sum_sq_diff / (data.size() - 1);
+    return cumulative_sum / data.size();
 }
