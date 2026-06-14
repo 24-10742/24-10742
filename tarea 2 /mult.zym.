@@ -1,0 +1,16 @@
+::zilly+
+sys.reset();
+Z => Z abs := fn(Z n) -> if(n < 0, 0 - n, n);
+Z => Z => Z mult := fn(Z y) -> fn(Z x) -> if(abs(x) < abs(y),mult(x)(y), if(y = 0,0,if(y < 0,(0 - x) + mult(y + 1)(x),x + mult(y - 1)(x))));
+// prueba//
+
+mult(0)(5)
+mult(5)(0)
+mult(1)(10)
+mult(7)(1)
+mult(4)(5)
+mult(5)(4)
+mult(3)(-6)
+mult(-3)(6)
+mult(-4)(-5)
+mult(1000)(2)
