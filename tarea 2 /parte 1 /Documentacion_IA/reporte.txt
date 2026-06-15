@@ -1,0 +1,17 @@
+REPORTE DE FUENTES E INTERACCIONES CON IA
+=========================================
+
+1. INTERACCIONES CON INTELIGENCIA ARTIFICIAL (IA)
+- Modelo utilizado: Gemini 1.5 Flash.
+- Uso de la IA: Utilicé a Gemini como asistente para estructurar el programa en C++ cumpliendo con la regla de modularidad. 
+- Resolucion de problemas: La IA me guió en la implementación del algoritmo K-Means usando las estructuras requeridas. También me ayudó a identificar y corregir un error crítico donde el traductor automático del navegador estaba modificando la sintaxis del código, lo que impedía la compilación.
+- Prompts principales usados: "donde me estoy equuivocando", "asi va bien?", "explicamelo".
+
+2. FUENTES CONSULTADAS
+- Material provisto: NagySoft.pdf.
+- Distancia Euclidiana: (https://en.wikipedia.org/wiki/Euclidean_distance#Squared_Euclidean_distance).
+- K-Means Clustering (Wikipedia): (https://en.wikipedia.org/wiki/K-means_clustering).
+- K-Means Clustering (Stanford CS221): (https://web.stanford.edu/~cpiech/cs221/handouts/kmeans.html) 
+
+3. COMENTARIOS PERSONALES
+Adaptarse a los requerimientos de la empresa fue un buen reto. La lógica de calcular los centroides y agrupar los puntos requirió cuidado para no hacer "overfitting". Además, aplicar una modularidad estricta y gestionar los archivos a través de un repositorio en GitHub hizo que la experiencia se sintiera muy cercana al mundo real del desarrollo de software.
